@@ -46,6 +46,9 @@ a {
   outline: none;
   cursor: pointer;
 }
+.iconfont {
+  font-size: 0.5555rem !important;
+}
 .xiaozhu {
   width: 100%;
   overflow: hidden;
@@ -57,7 +60,7 @@ a {
 }
 .xiaozhu .head__banner {
   width: 100%;
-  height: 37.5rem;
+  height: 11.1111rem;
   position: relative;
 }
 .xiaozhu .head__banner .banner__li {
@@ -68,91 +71,97 @@ a {
 .xiaozhu .head__head-bar {
   position: absolute;
   top: 0;
-  padding: 1.9375rem 1.25rem 0;
+  padding: 0.574rem 0.3703rem 0;
   box-sizing: border-box;
   width: 100%;
 }
 .xiaozhu .head__head-bar .head-bar__con {
-  height: 3.9375rem;
+  height: 1.1666rem;
 }
 .xiaozhu .head__head-bar .head-bar__con .logo {
   display: block;
-  width: 8rem;
-  height: 3.8125rem;
+  width: 2.3703rem;
+  height: 1.1296rem;
   float: left;
 }
 .xiaozhu .head__head-bar .head-bar__con .slogan {
   display: block;
-  width: 8.0625rem;
-  height: 1.0625rem;
+  width: 2.3888rem;
+  height: 0.3148rem;
   float: left;
   background-position: 0 -440px;
-  margin: 1.0625rem 0 0 1.25rem;
+  margin: 0.3148rem 0 0 0.3703rem;
 }
 .xiaozhu .head__head-bar .head-bar__con .nav-R {
   float: right;
-  font-size: 14px;
+  font-size: 0.2592rem;
   font-family: "microsoft yahei";
   display: flex;
 }
 .xiaozhu .head__head-bar .head-bar__con .nav-R li {
   color: #fff;
-  height: 2.75rem;
-  line-height: 2.75rem;
+  height: 0.8148rem;
+  line-height: 0.8148rem;
 }
 .xiaozhu .head__head-bar .head-bar__con .nav-R li a {
   text-decoration: none;
   color: #fff;
-  padding: 0 0.625rem;
+  padding: 0 0.1851rem;
   display: inline-block;
 }
 .xiaozhu .head__head-bar .head-bar__con .nav-R li .openTri_R {
-  padding-right: 0.875rem;
-  margin-right: 1.25rem;
+  padding-right: 0.2592rem;
+  margin-right: 0.3703rem;
   background-position: right -118px;
 }
 .xiaozhu .head__head-bar .head-bar__con .nav-R li .icon_iphone {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 0.4444rem;
+  padding-right: 0.4444rem;
   background-position: 0 -118px;
 }
 .xiaozhu .head__head-bar .head-bar__con .nav-R li .btn_free {
-  width: 8rem;
+  width: 2.3703rem;
   background-color: #1abc9c;
   text-align: center;
-  font-size: 18px;
+  font-size: 0.3333rem;
+  opacity: 0.9;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .btn_free:hover {
+  background-color: #1aaa88;
 }
 .xiaozhu .head__pic-pre {
-  width: 3.125rem;
-  height: 6.25rem;
+  width: 0.9259rem;
+  height: 1.8518rem;
   display: inline-block;
   position: absolute;
   top: 50%;
-  transform: translate(1.5625rem, -3.125rem);
+  transform: translate(0.46295rem, -0.9259rem);
+  cursor: pointer;
 }
 .xiaozhu .head__pic-next {
-  width: 3.125rem;
-  height: 6.25rem;
+  width: 0.9259rem;
+  height: 1.8518rem;
   display: inline-block;
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translate(-1.5625rem, -3.125rem);
+  transform: translate(-0.46295rem, -0.9259rem);
   background-position: 0 -115px;
+  cursor: pointer;
 }
 .xiaozhu .head__search {
-  width: 58.79rem;
+  width: 17.4074rem;
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 0.7407rem;
   left: 50%;
-  transform: translateX(-29.395rem);
+  transform: translateX(-8.7037rem);
   display: flex;
 }
 .xiaozhu .head__search div {
   flex: 1;
 }
 .xiaozhu .head__search .where {
-  height: 3.75rem;
+  height: 1.1111rem;
   background-color: #fff;
   margin-right: 2px;
 }
@@ -161,24 +170,49 @@ a {
   margin-right: 2px;
 }
 .xiaozhu .head__search .search-btn {
-  width: 11.25rem;
-  background-color: #f16b80;
+  width: 3.3333rem;
   flex: 0 0 auto;
+  color: #fff;
+  position: relative;
+}
+.xiaozhu .head__search .search-btn .btn_pink_search {
+  width: 100%;
+  background-color: #f16b80;
+  border: none;
+  font-size: 0.474rem;
+  color: #fff;
+  font-family: "microsoft yahei";
+  cursor: pointer;
+  padding-left: 0.6666rem;
+  text-align: left;
+  height: 100%;
+}
+.xiaozhu .head__search .search-btn .btn_pink_search:hover {
+  background-color: #e64966;
+}
+.xiaozhu .head__search .search-btn span {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .xiaozhu .head__search .icon_place_box {
-  width: 3.4375rem;
-  height: 3.75rem;
+  width: 1.0185rem;
+  height: 1.1111rem;
   display: inline-block;
   float: left;
+  text-align: center;
+  padding-top: 0.23rem;
+  box-sizing: border-box;
+  cursor: text;
 }
 .xiaozhu .head__search .ipt_search {
-  width: 19.52rem;
-  height: 1.875rem;
-  margin: 0.9375rem 0;
-  padding-right: 0.625rem;
+  width: 5.791rem;
+  height: 0.5555rem;
+  margin: 0.2777rem 0;
+  padding-right: 0.1851rem;
   border: none;
   color: #2c3e50;
-  font-size: 18px;
+  font-size: 0.33333rem;
   font-family: "microsoft yahei";
   float: left;
 }
