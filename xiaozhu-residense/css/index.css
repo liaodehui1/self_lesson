@@ -1,0 +1,184 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+a,
+span,
+i,
+b,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.logo,
+.slogan,
+.icon_iphone,
+.openTri_R {
+  background: url("../images/icon_head.png") no-repeat;
+}
+.head__pic-pre,
+.head__pic-next {
+  background: url("../images/icon_index.png") no-repeat;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+.xiaozhu {
+  width: 100%;
+  overflow: hidden;
+}
+.xiaozhu .head {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.xiaozhu .head__banner {
+  width: 100%;
+  height: 37.5rem;
+  position: relative;
+}
+.xiaozhu .head__banner .banner__li {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.xiaozhu .head__head-bar {
+  position: absolute;
+  top: 0;
+  padding: 1.9375rem 1.25rem 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.xiaozhu .head__head-bar .head-bar__con {
+  height: 3.9375rem;
+}
+.xiaozhu .head__head-bar .head-bar__con .logo {
+  display: block;
+  width: 8rem;
+  height: 3.8125rem;
+  float: left;
+}
+.xiaozhu .head__head-bar .head-bar__con .slogan {
+  display: block;
+  width: 8.0625rem;
+  height: 1.0625rem;
+  float: left;
+  background-position: 0 -440px;
+  margin: 1.0625rem 0 0 1.25rem;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R {
+  float: right;
+  font-size: 14px;
+  font-family: "microsoft yahei";
+  display: flex;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li {
+  color: #fff;
+  height: 2.75rem;
+  line-height: 2.75rem;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 0.625rem;
+  display: inline-block;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .openTri_R {
+  padding-right: 0.875rem;
+  margin-right: 1.25rem;
+  background-position: right -118px;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .icon_iphone {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-position: 0 -118px;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .btn_free {
+  width: 8rem;
+  background-color: #1abc9c;
+  text-align: center;
+  font-size: 18px;
+}
+.xiaozhu .head__pic-pre {
+  width: 3.125rem;
+  height: 6.25rem;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(1.5625rem, -3.125rem);
+}
+.xiaozhu .head__pic-next {
+  width: 3.125rem;
+  height: 6.25rem;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-1.5625rem, -3.125rem);
+  background-position: 0 -115px;
+}
+.xiaozhu .head__search {
+  width: 58.79rem;
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-29.395rem);
+  display: flex;
+}
+.xiaozhu .head__search div {
+  flex: 1;
+}
+.xiaozhu .head__search .where {
+  height: 3.75rem;
+  background-color: #fff;
+  margin-right: 2px;
+}
+.xiaozhu .head__search .date {
+  background-color: #fff;
+  margin-right: 2px;
+}
+.xiaozhu .head__search .search-btn {
+  width: 11.25rem;
+  background-color: #f16b80;
+  flex: 0 0 auto;
+}
+.xiaozhu .head__search .icon_place_box {
+  width: 3.4375rem;
+  height: 3.75rem;
+  display: inline-block;
+  float: left;
+}
+.xiaozhu .head__search .ipt_search {
+  width: 19.52rem;
+  height: 1.875rem;
+  margin: 0.9375rem 0;
+  padding-right: 0.625rem;
+  border: none;
+  color: #2c3e50;
+  font-size: 18px;
+  font-family: "microsoft yahei";
+  float: left;
+}
