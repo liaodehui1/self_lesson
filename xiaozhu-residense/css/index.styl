@@ -17,6 +17,10 @@ a
     cursor pointer
 .iconfont
     font-size 1.875rem !important
+.nomargin
+    margin none !important
+.city-top
+    top 0
 @media (max-width 768px)
     html
         font-size 6px !important
@@ -202,3 +206,105 @@ a
         display inline-block
         width 100%
         text-align center
+.theme
+    padding 2.625rem 0
+    &__title
+        font-size 2.75rem
+        color #445566
+        display block
+        text-align center
+        padding-bottom 0.9375rem
+        box-sizing border-box
+    &__content
+        text-align center
+        font-size 1.125rem
+        color #959ea7
+.rooms-show
+    .roomList
+        width 60rem
+        margin 0 auto
+        padding 0 0.625rem 3.125rem
+        .room
+            float left
+            position relative
+            margin 0 0.875rem 0.875rem 0
+            font-size 0
+            .city-img
+                width 38.875rem
+            &__img
+                width 19rem
+                height 15.5rem
+            .img-cover
+                width 100%
+                height 100%
+                position absolute
+                background-color #000
+                transform translateY(-100%)
+                opacity 0.2
+            &__intro
+                position absolute
+                bottom 0
+                width 100%
+                text-align center
+                color #ffffff
+                font-size 1.125rem
+                .user-fd
+                    width 3.125rem
+                    height 3.125rem
+                    border 2px solid #ffffff
+                    border-radius 50%
+                .room-name
+                    width 16.75rem
+                    padding 0.625rem 0
+                    display inline-block
+                    white-space nowrap
+                    text-overflow ellipsis
+                    overflow hidden
+                .price
+                    display inline-block
+                    height 1.875rem
+                    line-height 1.875rem
+                    background-color #000000
+                    opacity 0.6
+                    padding 0 1rem
+                    box-sizing border-box
+            &__hover:hover
+                box-shadow 0 0 6px #bbb
+                padding 0.625rem
+                left -0.625rem
+                top -0.625rem
+        &:after
+            content ''
+            clear both
+            display block
+.our-credit
+    &__content
+        width 60rem
+        margin 0 auto
+        padding 0 0.625rem 3.125rem
+        display flex
+        .jz
+            flex 1
+            padding 1.25rem 1.5625rem
+            border-right 1px solid #ECF0F1
+            position relative
+            &__img
+                background url(../images/jz.png) no-repeat
+                display inline-block
+                width 11.75rem
+                height 9.5rem
+                for n in 0 1 2 3
+                    &.jz__img{n+1}//单独bp设置无效，需要利用span样式
+                        background-position:0 -162px * n
+            &:last-child
+                border-right none
+            &__hover:hover
+                box-shadow 0 0 6px #bbb
+.room__hover,.jz__hover
+    display block
+    width 100%
+    height 100%
+    position absolute
+    top 0
+    left 0
+    z-index 9

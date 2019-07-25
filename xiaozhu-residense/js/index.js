@@ -1,4 +1,5 @@
 (function () {
+    //轮播图
     var length = $('.banner__li').length
     setInterval(autoPlay,6000)
     var current=0
