@@ -17,4 +17,18 @@
         offset-y 内阴影时正值上 外阴影时相反
     3. blur 阴影模糊度 越大越模糊
     4. spread 阴影扩大或缩小范围
+- 文字超出部分省略
+    1. 单行(.room-name)
+        white-space nowrap 不换行
+        text-overflow ellipsis
+        overflow hidden
+    2. 多行(.cd-content a)
+        display -webkit-box 必要属性
+        text-overflow ellipsis
+        word-wrap break-word 设置换行时英文单词不被分割
+        -webkit-line-clamp 5 设置超出多少行显示省略号
+        overflow hidden
+
+
+
 
