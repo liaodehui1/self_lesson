@@ -28,6 +28,7 @@
         word-wrap break-word 设置换行时英文单词不被分割
         -webkit-line-clamp 5 设置超出多少行显示省略号
         overflow hidden
+- vertical-align middle 解决图片和文字水平不齐
 
 
 

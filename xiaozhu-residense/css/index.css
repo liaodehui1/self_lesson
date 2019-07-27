@@ -381,42 +381,42 @@ a {
 .xiaozhu .our-credit__content .jz__hover:hover {
   box-shadow: 0 0 6px #bbb;
 }
-.comments_diarys {
+.xiaozhu .comments_diarys {
   background: url("../images/bg_comment.jpg") no-repeat;
   background-size: cover;
 }
-.comments_diarys .theme__title,
-.comments_diarys .theme__content {
+.xiaozhu .comments_diarys .theme__title,
+.xiaozhu .comments_diarys .theme__content {
   color: #fff !important;
 }
-.comments_diarys .cd-contents {
+.xiaozhu .comments_diarys .cd-contents {
   display: flex;
   justify-content: center;
   position: relative;
 }
-.comments_diarys .cd-contents .comments,
-.comments_diarys .cd-contents .dairys {
+.xiaozhu .comments_diarys .cd-contents .comments,
+.xiaozhu .comments_diarys .cd-contents .dairys {
   flex: 1;
   padding: 0 5.4375rem;
   text-align: center;
 }
-.comments_diarys .cd-contents .middle-line {
+.xiaozhu .comments_diarys .cd-contents .middle-line {
   display: inline-block;
   height: 14.8125rem;
   border-right: 1px solid #7d7d7d;
   position: absolute;
   top: 8.1875rem;
 }
-.comments_diarys .cd-contents .cd-title {
+.xiaozhu .comments_diarys .cd-contents .cd-title {
   display: block;
   color: #fff;
   font-size: 1.5rem;
   margin-bottom: 1.5625rem;
 }
-.comments_diarys .cd-contents .cd-list li {
+.xiaozhu .comments_diarys .cd-contents .cd-list li {
   line-height: 1.5rem;
 }
-.comments_diarys .cd-contents .cd-list li .head-pic {
+.xiaozhu .comments_diarys .cd-contents .cd-list li .head-pic {
   width: 6rem;
   height: 6rem;
   border: 2px solid #fff;
@@ -424,19 +424,19 @@ a {
   overflow: hidden;
   margin: 0 auto;
 }
-.comments_diarys .cd-contents .cd-list li .head-pic img {
+.xiaozhu .comments_diarys .cd-contents .cd-list li .head-pic img {
   width: 100%;
 }
-.comments_diarys .cd-contents .cd-list li span {
+.xiaozhu .comments_diarys .cd-contents .cd-list li span {
   color: #fff;
   font-size: 0.75rem;
   display: block;
 }
-.comments_diarys .cd-contents .cd-list li .cd-content {
+.xiaozhu .comments_diarys .cd-contents .cd-list li .cd-content {
   padding: 0.9375rem 0;
   text-align: left;
 }
-.comments_diarys .cd-contents .cd-list li .cd-content a {
+.xiaozhu .comments_diarys .cd-contents .cd-list li .cd-content a {
   color: #fff;
   display: -webkit-box;
   text-overflow: ellipsis;
@@ -445,19 +445,140 @@ a {
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
-.comments_diarys .cd-contents .cmt-ul {
+.xiaozhu .comments_diarys .cd-contents .cmt-ul {
   margin-bottom: 3.125rem;
   font-size: 0;
 }
-.comments_diarys .cd-contents .cmt-ul li {
+.xiaozhu .comments_diarys .cd-contents .cmt-ul li {
   display: inline-block;
   width: 2.5rem;
   height: 0.375rem;
   margin: 0.375rem 0.375rem 0 0;
   background-color: #fff;
 }
-.comments_diarys .cd-contents .cmt-ul .cmt-current {
+.xiaozhu .comments_diarys .cd-contents .cmt-ul .cmt-current {
   background-color: #f05b72;
+}
+.xiaozhu .footer {
+  margin: 1.25rem auto;
+  width: 59.6875rem;
+  text-align: center;
+}
+.xiaozhu .footer__title {
+  display: inline-block;
+  color: #f05b72;
+  font-size: 0.875rem;
+}
+.xiaozhu .footer .see {
+  margin: 0.3125rem auto 2.1875rem;
+}
+.xiaozhu .footer .see a {
+  display: inline-block;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  margin: 0 0.5rem;
+  background: url("../images/icon_head.png") no-repeat;
+}
+.xiaozhu .footer .see .icon-wx {
+  background-position: 0 -208px;
+}
+.xiaozhu .footer .see .icon-wb {
+  background-position: -45px -208px;
+}
+.xiaozhu .footer__ul {
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+.xiaozhu .footer__ul li {
+  float: left;
+  margin-right: 2rem;
+  color: #959ea7;
+  width: 3.5625rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+.xiaozhu .footer__ul .guide {
+  padding-top: 3.125rem;
+  display: inline-block;
+  background: url("../images/icon_head.png") no-repeat;
+  background-position: 8px -258px;
+}
+.xiaozhu .footer__ul .guide.fk {
+  background-position: -44px -258px;
+}
+.xiaozhu .footer__ul .web-protocol {
+  width: 17.5rem;
+}
+.xiaozhu .footer__ul .web-protocol a {
+  margin-right: 0.4375rem;
+  white-space: nowrap;
+}
+.xiaozhu .footer__ul .online-kf {
+  width: 10.8125rem;
+}
+.xiaozhu .footer__ul .online-kf .logindialog {
+  display: inline-block;
+  padding: 0 0.375rem;
+  background-color: #f05b72;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.xiaozhu .footer__ul .online-kf .logindialog i {
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.875rem;
+  vertical-align: middle;
+  background: url("http://jci.xiaozhustatic1.com/e19071001/images/xz_online_kf.png") no-repeat;
+}
+.xiaozhu .footer__ul .online-kf p {
+  white-space: nowrap;
+}
+.xiaozhu .footer .footer__link-dl {
+  text-align: left;
+  overflow: hidden;
+}
+.xiaozhu .footer .footer__link-dl dt,
+.xiaozhu .footer .footer__link-dl dd {
+  float: left;
+}
+.xiaozhu .footer .footer__link-dl dd {
+  width: 54.3rem;
+  margin-left: 1.25rem;
+}
+.xiaozhu .footer .footer__link-dl dd a {
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+.xiaozhu .footer__btm {
+  line-height: 1.625rem;
+}
+.xiaozhu .footer__report a {
+  height: 1.25rem;
+  line-height: 1.25rem;
+  display: inline-block;
+}
+.xiaozhu .footer__report a p {
+  margin-left: 0.3125rem;
+  display: inline-block;
+}
+.xiaozhu .footer__report a img,
+.xiaozhu .footer__report a p {
+  vertical-align: middle;
+}
+.xiaozhu .footer .guide,
+.xiaozhu .footer .guide-title,
+.xiaozhu .footer dt {
+  color: #959ea7;
+  font-size: 0.875rem;
+}
+.xiaozhu .footer a,
+.xiaozhu .footer span,
+.xiaozhu .footer p,
+.xiaozhu .footer .footer__btm,
+.xiaozhu .footer .footer__report {
+  color: #959ea7;
+  font-size: 0.75rem;
 }
 .theme {
   padding: 2.625rem 0;
