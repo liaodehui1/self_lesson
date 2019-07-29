@@ -40,3 +40,13 @@
         })
     }
 })()
+
+$('.reg_open').click(function(){
+    $(this).css('left','-54px')
+    $('.reg_wrap').css('left','0px')
+})
+
+$('.reg_close').click(function(){
+    $('.reg_wrap').attr('style','')
+    setTimeout(()=>$('.reg_open').attr('style',''),500)
+})
