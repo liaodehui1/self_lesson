@@ -28,7 +28,15 @@
         word-wrap break-word 设置换行时英文单词不被分割
         -webkit-line-clamp 5 设置超出多少行显示省略号
         overflow hidden
-- vertical-align middle 解决图片和文字水平不齐
+- vertical-align middle 
+    1. 解决图片和文字水平不齐
+- 图片与容器底部之间有空白间隙
+    1. 原因 元素默认与父级元素baseline对齐 baseline与父级元素底部有距离(font-size/line-height造成)
+    1. 解决办法:vertical-align不为baseline;img为block;父级font-size/line-height=0
+- hover 悬停
+    1. 改变元素自身样式 .className:hover
+    2. 改变子元素样式 .parentClassName:hover .childClassName
+    3. 改变兄弟元素(悬停元素后面,紧贴悬停元素)的样式 .ClassName:hover+brotherClassName
 
 
 

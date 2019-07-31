@@ -99,19 +99,53 @@ a
                         height 2.75rem
                         line-height 2.75rem
                         float left
+                        .head-pop
+                            background-color #000
+                            position absolute
+                            padding 0.625rem 0.5625rem
+                            box-sizing border-box
+                            text-align center
+                            transform translateX(-10%)
+                            line-height 2rem
+                            display none
+                            &.guide
+                                &:hover
+                                    display block
+                            &.knowMore
+                                padding-right 0
+                                padding-left 0
+                                transform translate(-13%,-4%)
+                                display none
+                                &:hover
+                                    display block
+                            a
+                                display block
+                                img
+                                    vertical-align middle
+                                    // display block
                         a
                             text-decoration none
                             color #ffffff
                             padding 0 0.6247rem
                             display inline-block
+                            &:hover
+                                color #f05b72
                         .openTri_R
                             padding-right 0.8748rem
                             margin-right 1.25rem
                             background-position right -118px
+                            &:hover
+                                background-position right -164px
+                                +.head-pop
+                                    display block
                         .icon_iphone
                             padding-left 1.5rem
                             padding-right 1.5rem
                             background-position 0 -118px
+                            &:hover
+                                background-position 0 -154px
+                                +.knowMore
+                                    display block
                         .btn_free
                             width 8rem
                             background-color #1abc9c
@@ -120,6 +154,7 @@ a
                             opacity 0.9
                             &:hover
                                 background-color #1aaa88
+                                color #fff
         &__pic-pre
             width 3.125rem
             height 6.25rem
@@ -438,32 +473,7 @@ a
         a,span,p,.footer__btm,.footer__report
             color #959ea7
             font-size 0.75rem
-                
-.reg_open 
-    position fixed
-    bottom 0
-    left 0
-    cursor pointer
-    transition left .5s
-.reg_wrap
-    position fixed
-    bottom 0
-    left -1920px
-    width 100%
-    height 170px
-    z-index 9
-    transition left 1s
-    .reg_main
-        position absolute
-        bottom 0
-        left 50%
-        transform translateX(-50%)
-        cursor pointer
-    .reg_close
-        position absolute
-        right 15%
-        top 5%
-        cursor pointer
+
 .theme
     padding 2.625rem 0
     &__title

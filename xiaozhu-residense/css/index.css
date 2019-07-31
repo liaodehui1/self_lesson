@@ -153,21 +153,64 @@ a {
   line-height: 2.75rem;
   float: left;
 }
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .head-pop {
+  background-color: #000;
+  position: absolute;
+  padding: 0.625rem 0.5625rem;
+  box-sizing: border-box;
+  text-align: center;
+  transform: translateX(-10%);
+  line-height: 2rem;
+  display: none;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .head-pop.guide:hover {
+  display: block;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .head-pop.knowMore {
+  padding-right: 0;
+  padding-left: 0;
+  transform: translate(-13%, -4%);
+  display: none;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .head-pop.knowMore:hover {
+  display: block;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .head-pop a {
+  display: block;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .head-pop a img {
+  vertical-align: middle;
+}
 .xiaozhu .head__head-bar .head-bar__con .nav-R li a {
   text-decoration: none;
   color: #fff;
   padding: 0 0.6247rem;
   display: inline-block;
 }
+.xiaozhu .head__head-bar .head-bar__con .nav-R li a:hover {
+  color: #f05b72;
+}
 .xiaozhu .head__head-bar .head-bar__con .nav-R li .openTri_R {
   padding-right: 0.8748rem;
   margin-right: 1.25rem;
   background-position: right -118px;
 }
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .openTri_R:hover {
+  background-position: right -164px;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .openTri_R:hover +.head-pop {
+  display: block;
+}
 .xiaozhu .head__head-bar .head-bar__con .nav-R li .icon_iphone {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   background-position: 0 -118px;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .icon_iphone:hover {
+  background-position: 0 -154px;
+}
+.xiaozhu .head__head-bar .head-bar__con .nav-R li .icon_iphone:hover +.knowMore {
+  display: block;
 }
 .xiaozhu .head__head-bar .head-bar__con .nav-R li .btn_free {
   width: 8rem;
@@ -178,6 +221,7 @@ a {
 }
 .xiaozhu .head__head-bar .head-bar__con .nav-R li .btn_free:hover {
   background-color: #1aaa88;
+  color: #fff;
 }
 .xiaozhu .head__pic-pre {
   width: 3.125rem;
@@ -579,35 +623,6 @@ a {
 .xiaozhu .footer .footer__report {
   color: #959ea7;
   font-size: 0.75rem;
-}
-.reg_open {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  cursor: pointer;
-  transition: left 0.5s;
-}
-.reg_wrap {
-  position: fixed;
-  bottom: 0;
-  left: -1920px;
-  width: 100%;
-  height: 170px;
-  z-index: 9;
-  transition: left 1s;
-}
-.reg_wrap .reg_main {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  cursor: pointer;
-}
-.reg_wrap .reg_close {
-  position: absolute;
-  right: 15%;
-  top: 5%;
-  cursor: pointer;
 }
 .theme {
   padding: 2.625rem 0;

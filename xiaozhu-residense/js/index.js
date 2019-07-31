@@ -41,12 +41,56 @@
     }
 })()
 
-$('.reg_open').click(function(){
-    $(this).css('left','-54px')
-    $('.reg_wrap').css('left','0px')
-})
+// $('.reg_open').click(function(){
+//     $(this).css('left','-54px')
+//     $('.reg_wrap').css('left','0px')
+// })
 
-$('.reg_close').click(function(){
-    $('.reg_wrap').attr('style','')
-    setTimeout(()=>$('.reg_open').attr('style',''),500)
-})
+// $('.reg_close').click(function(){
+//     $('.reg_wrap').attr('style','')
+//     setTimeout(()=>$('.reg_open').attr('style',''),500)
+// })
+
+var reg_open=document.getElementById('reg_open')
+var reg_wrap=document.getElementById('reg_wrap')
+var reg_close=document.getElementById('reg_close')
+var reg_main=document.getElementById('reg_main')
+// console.log(reg_open.style.left)
+var dynamic_attr=function(ele,value,time){
+    let avg=value/(time/20)
+    let cur=ele.offsetLeft
+    // console.log(value,cur)
+    if(ele.offsetLeft<0){
+        value=0
+        avg=-avg
+        var timer=setInterval(function(){
+            // console.log(ele,cur,value)
+            if(cur!=-value){
+                cur-avg<-value?cur-=avg:cur=-value
+                ele.style.left=cur+'px'
+            }else{
+                clearInterval(timer)
+            }
+        },20)
+    }else{
+        var timer=setInterval(function(){
+            // console.log(ele,cur,value)
+            if(cur!=-value){
+                cur-avg>-value?cur-=avg:cur=-value
+                ele.style.left=cur+'px'
+            }else{
+                clearInterval(timer)
+            }
+        },20)
+    }
+}
+reg_close.onclick=function(){
+    dynamic_attr(reg_wrap,reg_main.width,500)
+    setTimeout(function(){
+        dynamic_attr(reg_open,reg_open.width,100)
+    },550)
+}
+reg_open.onclick=function(){
+    dynamic_attr(reg_open,reg_open.width,100)
+    dynamic_attr(reg_wrap,reg_main.width,500)
+}
