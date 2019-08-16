@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function promiseClick1() {
+            console.log('promiseClick1')
+            let p = new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    var num = Math.ceil(Math.random() * 20); //生成1-10的随机数
+                    console.log('promiseClick1随机数生成的值：', num)
+                    if (num <= 10) {
+                        resolve(num);
+                    }
+                    else {
+                        reject('promiseClick1数字太于10了即将执行失败回调');
+                    }
+                }, 7000);
+            })
+            return p
+        }
+        function promiseClick2() {
+            console.log('promiseClick2')
+            let p = new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    var num = Math.ceil(Math.random() * 20); //生成1-10的随机数
+                    console.log('promiseClick2随机数生成的值：', num)
+                    if (num <= 10) {
+                        resolve(num);
+                    }
+                    else {
+                        reject('promiseClick2数字太于10了即将执行失败回调');
+                    }
+                }, 9000);
+            })
+            console.log(p)
+            return p
+        }
+        function promiseClick3() {
+            console.log('promiseClick3')
+            let p = new Promise(function (resolve, reject) {
+                console.log('Promise3')
+                setTimeout(function () {
+                    var num = Math.ceil(Math.random() * 20); //生成1-10的随机数
+                    console.log('promiseClick3随机数生成的值：', num)
+                    if (num <= 10) {
+                        resolve(num);
+                    }
+                    else {
+                        reject('promiseClick3数字太于10了即将执行失败回调');
+                    }
+                }, 8000);
+            })
+            console.log(p)
+            return p
+        }
+
+        let p = Promise
+            .all([promiseClick3(), promiseClick2(), promiseClick1()])
+        .then(function(results){
+            console.log(results);
+        })
+        .catch(reason=>{
+            console.log(reason)
+        });
+        // console.log('开始函数')
+        // console.log(p)
+        console.log(new Date())//00:15:00
+        setTimeout(()=>{
+            console.log(new Date())//00:15:21
+            console.log(p)
+        },3000)
+        console.log(new Date())//00:15:00
+        let count=0
+        for(let i=0;i<10000000;i++){
+            count+=i
+        } 
+        console.log(new Date())//00:15:21
+    </script>
+</body>
+
+</html>
