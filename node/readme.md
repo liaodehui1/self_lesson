@@ -26,6 +26,7 @@ node中没有全局作用域,只有模块作用域
 ### exports
 + Node采用CommonJS模块规范
 + Node为每个模块提供了一个exports变量(var exports=module.exoprts)
++ 将要暴露的成员挂载到exports对象上
 + 与export有何不同?
     - export是ES6中用来导出模块 导入import
     - export 命名变量=变量值 用作命名导出 =>import {} from ''
