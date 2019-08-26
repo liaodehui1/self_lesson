@@ -31,6 +31,13 @@ node中没有全局作用域,只有模块作用域
     - export是ES6中用来导出模块 导入import
     - export 命名变量=变量值 用作命名导出 =>import {} from ''
     - export defalut 变量 只能有一个export default 不需要{}
+## Node中使用模板引擎
+使用户界面与业务数据（内容）分离
+## art-template
++ 安装 npm i art-template -S
++ 模板引擎使用
+    - 浏览器 template('script 标签 id',{对象})
+    - node template.rend(字符串内容,{对象})
 # web服务
 ## ip与端口号
 + ip地址定位计算机 req.scoket.remoteAddress

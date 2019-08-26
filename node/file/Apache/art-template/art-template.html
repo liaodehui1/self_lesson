@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>document</title>
+</head>
+
+<body>
+</body>
+<script src="../node_modules/art-template/lib/template-web.js"></script>
+<script type="text/template" id="tpl">
+    <!-- 字符串 -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <p>hello {{name}}</p>
+        <!-- 循环 -->
+        <p>{{each hobbies}}{{$value}}{{/each}}</p>
+    </body>
+    </html>
+</script>
+<script>
+    var ret = template('tpl', {
+        title: 'art-template',
+        name: 'art-template',
+        hobbies: [
+            '敲代码',
+            '打游戏',
+            '看电视'
+        ]
+    })
+    console.log(ret)
+</script>
+
+</html>
