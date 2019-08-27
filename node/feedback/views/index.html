@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>留言墙</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Example page header <small>Submit for header</small></h1>
+        <a id="submit" href="/post">发表留言</a>
+        <ul>
+            {{each comments}}
+            <li>
+                <span class="date">{{$value.date}}</span>
+                <span class="name">{{$value.name}}</span>
+                <span class="comment">{{$value.comment}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header" style="margin-bottom: 10px">
+            <a href="/">首页</a><small>发表评论</small>
+        </div>
+        <div id="comments">
+            <!-- 提交方式为get 后台query才不为空 -->
+            <form action="/comment" method="GET">
+                <div class="form-group" style="margin-bottom: 10px">
+                    <label for="name">你的名字</label>
+                    <input type="text" name="name" id="name">
+                </div>
+               <div class="form-group" style="margin-bottom: 10px">
+                    <label for="comment">留言内容</label>
+                    <textarea name="comment" id="comment" 
+                        style="display: block;width:300px;height:200px"></textarea>
+               </div>
+                <button type="submit">发表</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
