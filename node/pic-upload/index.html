@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片压缩上传</title>
+</head>
+<body>
+    <!-- 前端图片压缩上传 -->
+    <input type="file" name="pic" id="pic">
+    <button onclick="upload()">确定</button>
+    <script>
+        const eleFile=document.getElementById('pic')
+        var reader=new FileReader(),img=new Image()
+        var canvas=document.createElement('canvas')
+        var context=canvas.getContext('2d')
+        var file=null
+        eleFile.onchange=function(e){
+            // console.log(e)
+            file=e.target.files[0]
+            console.log(file)
+            //只对图片压缩
+            if(file.type.indexOf('image')===0){
+                //文件base64化
+                reader.readAsDataURL(file)
+            }else{
+                console.log('不是一张图片')
+            }
+        }
+        reader.onload=function(e){
+            img.src=e.target.result
+        }
+        img.onload=function(){
+            //canvas压缩
+            var originWidth=this.width
+            var originHeight=this.height
+            var maxWidth=400,maxHeight=400
+            var targetWidth=originHeight,targetHeight=originHeight
+
+            //等比例压缩
+            if(originWidth>maxWidth||originHeight>maxHeight){
+                if(originWidth/originHeight>maxWidth/maxHeight){
+                    targetWidth=maxWidth
+                    targetHeight=Math.round(maxWidth*(originHeight/originWidth))
+                }else{
+                    targetHeight=maxHeight
+                    targetWidth=Math.round(maxHeight*(originWidth/originHeight))
+                }
+            }
+            canvas.width=targetWidth
+            canvas.height=targetHeight
+            context.drawImage(this,0,0,targetWidth,targetHeight)
+            document.body.appendChild(canvas)
+        }
+        function upload(){
+            canvas.toBlob(function(blob){
+                let formData=new FormData()
+                formData.append('pic',blob,file.name)
+                var xhr=new XMLHttpRequest()
+                xhr.open('post','/upload',true)
+                xhr.send(formData)
+            },file.type || 'image/png')
+        }
+    </script>
+</body>
+</html>
