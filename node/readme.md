@@ -21,12 +21,14 @@ node中没有全局作用域,只有模块作用域
 3. 第三方模块
 ### require
 + 加载模块的相对路径必须./
-+ 用来加载模块并执行模块代码
++ 用来执行模块代码并加载导出模块
 + 能拿到一个模块导出的接口对象(exports)
 ### exports
 + Node采用CommonJS模块规范
 + Node为每个模块提供了一个exports变量(var exports=module.exoprts)
 + 将要暴露的成员挂载到exports对象上
++ 如果要直接导出模块中的某个成员 导出单个成员  
+    - module.exports=成员
 + 与export有何不同?
     - export是ES6中用来导出模块 导入import
     - export 命名变量=变量值 用作命名导出 =>import {} from ''
@@ -37,7 +39,7 @@ node中没有全局作用域,只有模块作用域
 + 安装 npm i art-template -S
 + 模板引擎使用
     - 浏览器 template('script 标签 id',{对象})
-    - node template.rend(字符串内容,{对象})
+    - node template.render(字符串内容,{对象})
 # web服务
 ## ip与端口号
 + ip地址定位计算机 req.scoket.remoteAddress
@@ -63,4 +65,17 @@ node中没有全局作用域,只有模块作用域
 + url中的'/'表示的是根目录 浏览器请求时会把127.0.0.1:8080拼上
 ## 重定向
 1. 设置响应状态码为302 statusCode
+    - 301 永久重定向 下次访问直接重定向
+    - 302 临时重定向 下次访问还是先访问再重定向
 2. 设置响应头的'Location'为重定向路径
+# 总结
+1. 不写;结尾?
+    + 不写时=>以'(','[','`'开头,前面加上;
+2. jQuery的each和原生js的forEach的区别?
+    + 原生js的forEach ES5提供的 不兼容IE8
+    + jQuery的each
+        - jQuery2 以下的版本兼容IE8 
+        - 他的each主要用来遍历jQuery获取的元素对象数组(伪数组) $('div')
+        - 可以作为低版本浏览器中forEach的替代品
+        - jQuery获取的元素对象数组不能用forEach遍历,如果需要必须转为数组
+            * `[].slice.call($('div'))`
