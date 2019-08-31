@@ -20,9 +20,21 @@ node中没有全局作用域,只有模块作用域
 2. 自定义模块
 3. 第三方模块
 ### require
-+ 加载模块的相对路径必须./
 + 用来执行模块代码并加载导出模块
 + 能拿到一个模块导出的接口对象(exports)
+### 模块加载机制
++ 加载规则
+    - 优先从缓存加载  
+        加载过的模块不会再次加载执行,为了取到模块的导出对象  
+    - 从当前目录一级一级往外查找
+    - 加载自定义模块的相对路径必须有 ./ ../等
+    - 加载第三方模块
+        * 找到node_modules目录下的模块名目录
+        * 找到模块名目录下的package.json文件
+        * 找到文件内的main属性
+        * 根据main属性值找到模块文件 执行加载  
+            main属性值没有或package.json文件没有 默认加载index.js  
++ 多个子目录需要node_modules =>项目根目录中存放node_modules
 ### exports
 + Node采用CommonJS模块规范
 + Node为每个模块提供了一个exports变量(var exports=module.exoprts)
@@ -40,6 +52,45 @@ node中没有全局作用域,只有模块作用域
 + 模板引擎使用
     - 浏览器 template('script 标签 id',{对象})
     - node template.render(字符串内容,{对象})
+
+# npm
+## package.json
++ 建议每个项目根目录下建立一个package.json => npm init
++ 如果node_modules被删除,没关系,npm install 会重新下载找回
++ 建议每次安装包时加上'--save' 保存依赖项信息
+## npm常用命令
+1. npm init
+    + npm init -y 快速生成
+2. npm install
+    + 一次性把dependencies
+    + npm i
+3. npm install 包名
+    + 只下载
+4. npm install --save 包名
+    + 下载并保存依赖项(package.json文件中的dependencies选项)
+    + npm i -S 包名
+5. npm uninstall 包名
+    + 只删除 如果有依赖项仍然保存
+    + npm un 包名
+6. npm uninstall --save 包名
+    + 删除的同时也删除依赖项
+7. npm 命令 --help
+    + 如果忘记命令简写,可以使用
+## npm被墙问题
++ 安装 cnpm
+    - npm install --global cnpm
++ 不想安装cnpm又想使用淘宝的服务器下载
+    - npm install 包名 --registry=http://registry.npm.taobao.org
+    - 每次按照上面下载会很麻烦 把这个选项加入配置文件中
+        * npm config set registry http://registry.npm.taobao.org
+
+# express
+## 介绍
++ 开放资源,目录
+    - `app.use(url,express.static('相对路径'))`
++ 获取查询字符串参数
+    - req.query
+
 # web服务
 ## ip与端口号
 + ip地址定位计算机 req.scoket.remoteAddress
