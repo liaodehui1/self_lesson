@@ -1,0 +1,20 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "+ node是JavaScript运行时环境\r + node构建与Chrome的V8引擎之上\r + node能像浏览器一样解析和执行JS代码\r + node**没有BOM和DOM**，只有Ecmascript JavaScript基本语言部分\r + 事件驱动、非阻塞I/O模型(异步)\r + node.js为JavaScript提供了一些服务器级别的API\r     * 文件操作的能力\r     * http服务的能力\r ## node核心模块\r 1. 文件操作-fs模块系统\r 2. http服务构建-http模块系统\r 3. 路径操作-path模块系统\r 4. 操作系统信息-os模块系统\r ## node模块系统\r node中没有全局作用域,只有模块作用域\r ### 模块种类\r 1. 核心模块(fs,http...)\r 2. 自定义模块\r 3. 第三方模块\r ### require\r + 用来执行模块代码并加载导出模块\r + 能拿到一个模块导出的接口对象(exports)\r ### 模块加载机制\r + 加载规则\r     - 优先从缓存加载  \r         加载过的模块不会再次加载执行,为了取到模块的导出对象  \r     - 从当前目录一级一级往外查找\r     - 加载自定义模块的相对路径必须有 ./ ../等\r     - 加载第三方模块\r         * 找到node_modules目录下的模块名目录\r         * 找到模块名目录下的package.json文件\r         * 找到文件内的main属性\r         * 根据main属性值找到模块文件 执行加载  \r             main属性值没有或package.json文件没有 默认加载index.js  \r + 多个子目录需要node_modules =>项目根目录中存放node_modules\r ### exports\r + Node采用CommonJS模块规范\r + Node为每个模块提供了一个exports变量(var exports=module.exoprts)\r + 将要暴露的成员挂载到exports对象上\r + 如果要直接导出模块中的某个成员 导出单个成员  \r     - module.exports=成员\r + 与export有何不同?\r     - export是ES6中用来导出模块 导入import\r     - export 命名变量=变量值 用作命名导出 =>import {} from ''\r     - export defalut 变量 只能有一个export default 不需要{}\r ## Node中使用模板引擎\r 使用户界面与业务数据（内容）分离\r ### art-template\r + 安装 npm i art-template -S\r + 模板引擎使用\r     - 浏览器 template('script 标签 id',{对象})\r     - node template.render(字符串内容,{对象})",
+  "main": "index.js",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "express-art-template": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

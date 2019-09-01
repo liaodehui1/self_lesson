@@ -47,7 +47,7 @@ node中没有全局作用域,只有模块作用域
     - export defalut 变量 只能有一个export default 不需要{}
 ## Node中使用模板引擎
 使用户界面与业务数据（内容）分离
-## art-template
+### art-template
 + 安装 npm i art-template -S
 + 模板引擎使用
     - 浏览器 template('script 标签 id',{对象})
@@ -88,8 +88,33 @@ node中没有全局作用域,只有模块作用域
 ## 介绍
 + 开放资源,目录
     - `app.use(url,express.static('相对路径'))`
+    - `app.use('/public/',express.static('./public/'))`
 + 获取查询字符串参数
-    - req.query
+    - req.query //get
+## 路由处理
++ app.get 路由处理以GET方式请求
++ app.post 路由处理以POST方式请求
+## express中使用art-template模板引擎
++ 安装
+    - npm install --save art-template express-art-template
++ 配置
+    - app.engine('渲染文件后缀',require('express-art-template'))
++ 修改渲染文件所在路径
+    - 默认存放在views目录下
+    - 修改 => app.set('views','渲染文件所在路径')
++ 路由处理中渲染
+    - res.render('index.art') views下的index.art
+    - res.render('index.html') views下的index.html
+    - res.render('admin/index.html') views下的admin目录下的index.html
+## express中使用body-parser插件
++ express提供的req.query只能获取到get请求的参数并返回对象
++ 处理post请求
+    - 安装body-parser npm i -S body-parser
+    - 引入模块 `const bodyParser = require('body-parser')`
+    - 配置
+        * `app.use(bodyParser.urlencoded({ extended: false }))`
+        * `app.use(bodyParser.json())`
+    - 获取post请求参数 req.body
 
 # web服务
 ## ip与端口号
