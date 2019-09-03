@@ -1,12 +1,1 @@
-{
-    "students":[
-        {"id":1,"name":"张桑","gender":0,"age":18,"hobby":"打游戏"},
-        {"id":2,"name":"张桑","gender":0,"age":18,"hobby":"打游戏"},
-        {"id":3,"name":"张桑","gender":0,"age":18,"hobby":"打游戏"},
-        {"id":4,"name":"张桑","gender":0,"age":18,"hobby":"打游戏"},
-        {"id":5,"name":"张桑","gender":0,"age":18,"hobby":"打游戏"},
-        {"id":6,"name":"张桑","gender":0,"age":18,"hobby":"打游戏"},
-        {"id":7,"name":"张桑","gender":0,"age":18,"hobby":"打游戏"}
-    ]
-
-}
+{"students":[{"name":"as","gender":"1","age":"15","hobby":"zx","id":2},{"name":"123","gender":"1","age":"12","hobby":"12","id":3}]}

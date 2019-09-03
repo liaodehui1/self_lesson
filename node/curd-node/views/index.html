@@ -50,26 +50,6 @@
 
     <div class="container-fluid">
       <div class="row">
-        <!-- <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-          </ul>
-        </div> -->
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
 
@@ -84,7 +64,7 @@
           </div>
 
           <h2 class="sub-header">Section title</h2>
-          <a href="" class="btn btn-success">添加学生</a>
+          <a href="/student/new" class="btn btn-success">添加学生</a>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -94,6 +74,7 @@
                   <th>性别</th>
                   <th>年龄</th>
                   <th>爱好</th>
+                  <th>操作</th>
                 </tr>
               </thead>
               <tbody>
@@ -104,6 +85,10 @@
                   <td>{{$value.gender}}</td>
                   <td>{{$value.age}}</td>
                   <td>{{$value.hobby}}</td>
+                  <td>
+                      <a href="/student/edit?id={{$value.id}}">修改</a>
+                      <a href="/student/delete?id={{$value.id}}">删除</a>
+                  </td>
                 </tr>
                 {{/each}}
               </tbody>
