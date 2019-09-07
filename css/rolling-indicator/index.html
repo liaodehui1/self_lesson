@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滚动指示器</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            position: relative;
+        }
+        .indicator{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            /* bottom: calc(100vh - 5px); */
+            bottom: 0;
+            z-index: 1;
+            background: linear-gradient(to right top ,blue 50%,transparent 50%) no-repeat;
+            background-size: 100% calc(100% - 100vh + 5px);
+            mix-blend-mode: darken;
+        }
+        .indicator::after{
+            content: '';
+            position: fixed;
+            top: 5px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="indicator"></div>
+    <div style="width:100%;height:3500px; text-align: center;background-color: #aaa;"></div>
+</body>
+</html>
