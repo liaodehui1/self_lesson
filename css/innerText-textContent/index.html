@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>innerText和textContent区别</title>
+</head>
+
+<body style="white-space:nowrap">
+  一段文字     
+  内容
+  <p id="dom" >一段文字内容<span style="position:absolute;">...</span></p>
+
+  <button onClick="this.after(dom.innerText)">
+    innerText结果是？
+  </button>
+  <button onClick="this.after(dom.textContent)">
+    textContent结果是？
+  </button>
+
+  <p id="dom2">我后面有一段隐藏文字<span hidden>，就是我啦！</span></p>
+  <button onClick="this.after(dom2.innerText)">
+    innerText结果是？
+  </button>
+  <button onClick="this.after(dom2.textContent)">
+    textContent结果是？
+  </button>
+</body>
+
+</html>
