@@ -27,7 +27,7 @@
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h2 class="sub-header">修改信息</h2>
                 <form action="/student/edit" method="POST">
-                    <input type="hidden" name="id" value="{{student.id}}">
+                    <input type="hidden" name="_id" value="{{student.id}}">
                     <div class="form-group">
                         <label for="name">姓名</label>
                         <input type="text" class="form-control" name="name" id="" value="{{student.name}}">

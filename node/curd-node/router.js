@@ -8,7 +8,7 @@
  */
 const fs=require('fs')
 const express=require('express')
-const student=require('./student')
+const student=require('./student-mongoose')
 // express提供了一个更好的方式
 //专门用来包装路由
 // 1. 创建一个路由容器
