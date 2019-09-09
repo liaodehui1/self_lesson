@@ -58,6 +58,9 @@ node中没有全局作用域,只有模块作用域
 + 建议每个项目根目录下建立一个package.json => npm init
 + 如果node_modules被删除,没关系,npm install 会重新下载找回
 + 建议每次安装包时加上'--save' 保存依赖项信息
+## package-lock.json
++ 用于锁定版本
++ 当package-lock.json和package.json中包版本相同时 'npm i'不会安装最新版本
 ## npm常用命令
 1. npm init
     + npm init -y 快速生成
@@ -92,8 +95,16 @@ node中没有全局作用域,只有模块作用域
 + 获取查询字符串参数
     - req.query //get
 ## 路由处理
-+ app.get 路由处理以GET方式请求
-+ app.post 路由处理以POST方式请求
+### 步骤
+1. 建立router.js模块专门处理路由
+2. express提供了一个更好的方式专门用来包装路由 `const router=express.Router()`
+3. 根据不同请求方式处理请求
+    + router.get 路由处理以GET方式的请求
+    + router.post 路由处理以POST方式的请求
+4. 导出router `module.exports=router`
+5. app.js 作为入口
+    + 加载路由模块
+    + 挂载路由容器 `app.use(router)`
 ## express中使用art-template模板引擎
 + 安装
     - npm install --save art-template express-art-template
@@ -112,8 +123,10 @@ node中没有全局作用域,只有模块作用域
     - 安装body-parser npm i -S body-parser
     - 引入模块 `const bodyParser = require('body-parser')`
     - 配置
-        * `app.use(bodyParser.urlencoded({ extended: false }))`
-        * `app.use(bodyParser.json())`
+        ```js
+        app.use(bodyParser.urlencoded({ extended: false }))
+        app.use(bodyParser.json())
+        ```
     - 获取post请求参数 req.body
 
 # web服务
@@ -144,6 +157,44 @@ node中没有全局作用域,只有模块作用域
     - 301 永久重定向 下次访问直接重定向
     - 302 临时重定向 下次访问还是先访问再重定向
 2. 设置响应头的'Location'为重定向路径
+
+# MongoDB
+## 关系型数据库和非关系型数据库
+1. 关系型数据库
+    + 所有关系型数据库需要使用sql语言来操作
+    + 在操作前需要设计表结构
+2. MongoDB是长得最像关系型数据库的非关系型数据库
+    + 数据库 -> 数据库
+    + 数据表 -> 集合(数组)
+    + 表记录 -> 文档对象
+## 操作
+1. 安装 [ZIP安装教程](https://www.cnblogs.com/jpfss/p/11247703.html)
+2. 启动服务 net start MongoDB
+3. 命令行使用MongoDB -> mongo
+4. 命令
+    + 展示所有数据库 `show dbs`
+    + 切换数据库，没有新建  `use 数据库名`
+    + 显示当前数据库 `db`
+    + 创建集合 db.createCollection('集合名称')
+    + 插入文档 db.集合名.insert(JSON对象)
+    + 查找表内所有文档 db.集合名.find()
+    + 查找表 show collections
+## mongoose
+1. 安装 npm i mongoose 
+2. 操作
+    + 增加 admin.save
+    + 查询
+        - 查询所有 User.find
+        - 按条件查询所有 User.find({username:'Admin'},callback) 没有为[]
+        - 按条件查询单个 User.findOne({username:'Admin'},callback) 没有为null
+    + 删除
+        - 删除所有 User.remove
+        - 根据条件删除一个 removeOne(condition,callback)
+        - 按条件删除所有 User.remove({username:'Admin'},callback)
+    + 修改
+        - 根据条件修改一个 updateOne(condition,doc,callback)
+        - 根据id更新 User.findByIdAndUpdate
+            * mongodb中有id和_id id的值为_id的值去掉引号后的值
 # 总结
 1. 不写;结尾?
     + 不写时=>以'(','[','`'开头,前面加上;
