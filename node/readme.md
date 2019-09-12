@@ -195,6 +195,33 @@ node中没有全局作用域,只有模块作用域
         - 根据条件修改一个 updateOne(condition,doc,callback)
         - 根据id更新 User.findByIdAndUpdate
             * mongodb中有id和_id id的值为_id的值去掉引号后的值
+3. 默认所有API拥有promise
+    + User.find({username:'Admin}).then(data=>{})
+# mysql
+## node中使用mysql
+1. 安装mysql包 npm i mysql -S
+2. require引入
+3. 创建数据库连接 
+    ```JS
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root',
+        database: 'demo'
+    });
+    ```
+4. 连接数据库  
+    `connection.connect();`
+5. 操作数据库
+    ```js
+    // 所有操作都是用query
+    connection.query(`sql语句`, function (error, results, fields) {
+        if (error) throw error;
+        操作
+    });
+    ```
+6. 关闭连接
+    `connection.end();`
 # 总结
 1. 不写;结尾?
     + 不写时=>以'(','[','`'开头,前面加上;
