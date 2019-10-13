@@ -69,3 +69,33 @@ vm.$set( target, propertyName/index, value )
 ## 使用props传递数据
 + 父组件使用短横分隔命名时，子组件props使用驼峰式命名
 + 父组件直接传递数字、布尔值、数组、对象，而且不使用v-bind，传递的仅仅是字符串
+## 非父子组件间的通信
+1. Bus总线 一个vue实例作为中介
+2. 父链 $parent和$children  
+$parent 访问父组件实例  
+$children 访问所有子组件  
+3. 子组件索引 $refs
+在mounted时才能使用 $nextTick
+引用普通元素或引用子组件实例
+## slot用法
++ 具名slot  
+父组件 slot="slotName"  
+子组件 <slot name="slotName">  
+# 组件高级用法
+## 递归组件
++ 为组件设置name,在组件template里面可以调用自身，添加限制条件结束递归
++ 使用级联选择器和树形选择器
+## 内联模板
++ 为子组件添加inline-template,子组件内的内容将作为模板插入父组件而不是slot
++ 同时存在inline-template和slot时，内容属于inline-template
++ 子组件和父组件都提供数据时，优先使用子组件数据
+## 动态组件
++ 使用<component :is="name">实现动态组件
++ component和v-if类似 组件显示到隐藏 实例创建到销毁
++ 每次name改变将挂载指定组件
+## 异步组件
++ 从服务器下载的组件定义
+## X-template定义组件模板
++ 在＜script> 标签里使用 text/x-template 类型，井且指定一个 id， 将这个 id 赋给组件的 template
+## 手动挂载实例
++ 挂载到el 组件模板覆盖html中$el元素及内容
