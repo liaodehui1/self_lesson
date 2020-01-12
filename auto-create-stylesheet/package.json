@@ -1,0 +1,23 @@
+{
+  "name": "auto-create-stylesheet",
+  "version": "1.0.0",
+  "description": "Automatically create the stylesheet of react native",
+  "main": "index.js",
+  "bin": {
+    "auto-create-stylesheet": "./bin/www"
+  },
+  "scripts": {
+    "compile": "babel src -d dist",
+    "watch": "npm run compile -- --watch"
+  },
+  "keywords": [],
+  "author": "J.O",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "commander": "^3.0.1"
+  }
+}
